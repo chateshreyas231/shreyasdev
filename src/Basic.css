@@ -1,0 +1,85 @@
+/* Terminal background and container styles */
+.basic-back {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  flex-wrap: wrap;
+  flex-direction:column;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: #0d0d0d; /* Dark background for terminal effect */
+  color: #ffffff; /* Classic green terminal text */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for authenticity */
+  overflow: hidden; /* Prevent scrolling */
+  position: absolute;
+}
+
+.basic-container {
+  width: 80%; /* Container width, adjust as needed */
+  max-width: 800px; /* Maximum width to maintain readability */
+  padding: 20px;
+  border: 1px solid #333; /* Subtle border for the container */
+  background-color: #1a1a1a; /* Slightly lighter background for contrast */
+ 
+}
+
+.img-me{
+  background-image: url('./components/images/S2.png');
+  left: 0%;bottom: 0%;
+  width: 20%;
+  height: 50%; 
+  z-index: 1;
+  position: absolute;
+}
+
+/* Text styles */
+.basic {
+  white-space: pre-wrap; /* Preserve formatting and line breaks */
+  overflow-wrap: break-word; /* Ensures long words don't overflow */
+ 
+  animation: blinkCursor 0.7s steps(1) infinite; /* Cursor blink animation */
+}
+
+/* Button to proceed to the next page */
+.next-page-button {
+  margin-top: 20px; /* Spacing above the button */
+  padding: 10px 20px;
+  border: 1px solid #33ff33; /* Border matching text color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: #33ff33; /* Match text color */
+  text-decoration: none; /* Remove underline from link */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.next-page-button:hover {
+  background-color: #33ff33; /* Background color on hover */
+  color: #0d0d0d; /* Text color on hover */
+}
+
+/* Cursor blink animation */
+@keyframes blinkCursor {
+  from { border-right-color: #ffffff; }
+  to { border-right-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  .basic-container {
+    top: 20%;
+    width: 95%; /* Increase width to use more of the screen */
+    max-width: none; /* Remove max-width restriction */
+    padding: 10px; /* Slightly reduce padding */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .basic {
+    font-size: 30px; /* Adjust font size for mobile */
+  }
+  .img-me{
+    bottom: 0%; left: -25%;
+    width: 70%;
+    height: 40%; 
+    position: absolute;
+  }
+}

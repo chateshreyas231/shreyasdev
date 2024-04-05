@@ -1,13 +1,27 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-size: large;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Share Tech Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',"Share Tech Mono"
     monospace;
 }
+
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,116 @@
+.background-land{
+  width: 100%;
+  height: 1100%;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.back-but{
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  margin: 1%;
+  font-size: larger;
+
+}
+.land {
+  padding-top: 1%;
+  max-width: 70%;
+  width: 70vw;
+  justify-content: center;
+}
+
+.bottom-land{
+  bottom: 0;
+  left: 0; right: 0;
+  max-width: 800px;
+  width: 80vw;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bottom-subland{
+  color: #fff;
+  margin: 0 20px;
+  cursor: pointer;
+  padding: auto;
+}
+
+.game-info{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.madewith{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+}
+
+.emailicon{
+  color: #fff;
+}
+
+.drink {
+  padding: 15%;
+  width: 15px;
+  height: 40px;
+  position: relative;
+  background: #603B2F;
+  border-radius: 0 0 5px 5px;
+}
+.drink:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px 5px;
+  border-top: 2px solid #bbb6aa;
+  border-bottom: 4px solid #f7f7f7;
+  background: 
+    linear-gradient(#612329 0 0) bottom no-repeat content-box, 
+    #e4e0d7;
+  mix-blend-mode: darken;
+  animation: p1 1.5s infinite linear;
+}
+.drink:before {
+  content: "";
+  position: absolute;
+  inset: -18px calc(50% - 2px) 8px;
+  background: #eb6b3e;   
+  transform-origin: bottom;
+  transform: rotate(8deg);
+}
+@keyframes p1 {
+ 0%   {background-size: 100% 100%}
+ 100% {background-size: 100% 5%}
+}
+
+@media (max-width: 768px) {
+  .background-land,html {
+    height: 100%;
+    justify-content: center;
+    max-height: 100vh;
+    overflow-y: hidden;
+    background-color: #000000;
+  }
+  .bottom-subland{
+    color: #fff;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  .footer-icons{
+    bottom: 5%;
+    position: absolute;
+  }
+}
